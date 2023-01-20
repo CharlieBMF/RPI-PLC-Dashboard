@@ -47,7 +47,9 @@ class Machine:
             master_on_value = self.read_bits(head=self.master_on_address)
             machine_status_value = self.read_bits(head=self.machine_status_address)
             mct_value = self.read_words(head=self.mct_address)
-            self.dashboard_data_set_report_requests(master_on_value, machine_status_value, mct_value)
+            self.dashboard_data_set_report_requests(master_on_value=master_on_value[0],
+                                                    machine_status_value=machine_status_value[0],
+                                                    mct_value=mct_value[0])
             self.dashboard_data = {
                 'master_on': master_on_value[0],
                 'machine_status': machine_status_value[0],
