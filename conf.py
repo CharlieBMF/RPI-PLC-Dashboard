@@ -42,7 +42,7 @@ machines_names = {
                 {
                     'master_on_address': 'M10',
                     'machine_status_address': 'M1023',
-                    'mct_address': 'D7210',
+                    'mct_address': 'D7200',
                 },
             'target_network': None,
             'plc_id_in_target_network': None
@@ -58,7 +58,7 @@ machines_names = {
                 {
                     'master_on_address': 'M10',
                     'machine_status_address': 'M1023',
-                    'mct_address': 'D7210',
+                    'mct_address': 'D7200',
                 },
             'target_network': None,
             'plc_id_in_target_network': None
@@ -122,7 +122,7 @@ machines_names = {
                 {
                     'master_on_address': 'M100',
                     'machine_status_address': 'M4',
-                    'mct_address': 'D7610',
+                    'mct_address': 'D7600',
                 },
             'target_network': None,
             'plc_id_in_target_network': None
@@ -138,7 +138,7 @@ machines_names = {
                 {
                     'master_on_address': 'M100',
                     'machine_status_address': 'M4',
-                    'mct_address': 'D7610',
+                    'mct_address': 'D7600',
                 },
             'target_network': None,
             'plc_id_in_target_network': None
@@ -154,7 +154,7 @@ machines_names = {
                 {
                     'master_on_address': 'M100',
                     'machine_status_address': 'M4',
-                    'mct_address': 'D7610',
+                    'mct_address': 'D7600',
                 },
             'target_network': None,
             'plc_id_in_target_network': None

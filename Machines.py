@@ -16,7 +16,8 @@ class Machine:
         self.machine_status_address = machine_status_address
         self.mct_address = mct_address
         self.machine = self.define_machine_root()
-        self.dashboard_data = {}
+        self.dashboard_data = {'master_on': 0, 'machine_status': 0, 'mct': 0}
+        self.dashboard_data_report_request = {'master_on': False, 'machine_status': False, 'mct': False}
 
     def define_machine_root(self):
         pymc3e = pymcprotocol.Type3E()
@@ -46,12 +47,21 @@ class Machine:
             master_on_value = self.read_bits(head=self.master_on_address)
             machine_status_value = self.read_bits(head=self.machine_status_address)
             mct_value = self.read_words(head=self.mct_address)
+            self.dashboard_data_set_report_requests(master_on_value, machine_status_value, mct_value)
             self.dashboard_data = {
                 'master_on': master_on_value[0],
                 'machine_status': machine_status_value[0],
                 'mct': mct_value[0]
             }
         self.close_connection()
+
+    def dashboard_data_set_report_requests(self, master_on_value, machine_status_value, mct_value):
+        if master_on_value != self.dashboard_data['master_on']:
+            self.dashboard_data_report_request['master_on'] = True
+        if machine_status_value != self.dashboard_data['machine_status']:
+            self.dashboard_data_report_request['machine_status'] = True
+        if mct_value != self.dashboard_data['mct']:
+            self.dashboard_data_report_request['mct'] = True
 
     def dashboard_data_display(self):
         print(

@@ -10,8 +10,9 @@ def create_machine_classes():
     list_of_machines = []
     for k, v in machines_names.items():
         k = Machine(id_line=v['id_line'], id_machine=v['id_machine'], name=v['name'], ip=v['ip'], port=v['port'],
-                    master_on_address=v['master_on_address'], machine_status_address=v['machine_status_address'],
-                    mct_address=v['mct_address'])
+                    master_on_address=v['address']['master_on_address'],
+                    machine_status_address=v['address']['machine_status_address'],
+                    mct_address=v['address']['mct_address'])
         list_of_machines.append(k)
     return list_of_machines
 
@@ -21,10 +22,15 @@ list_of_machine_classes = create_machine_classes()
 
 while True:
     for machine_class in list_of_machine_classes:
-        machine_class.dashboard_data_acquisition()
-        machine_class.connection_data_display()
-        machine_class.dashboard_data_display()
-        print('\n'*5)
+        try:
+            machine_class.connect()
+        except:
+            continue
+        else:
+            machine_class.dashboard_data_acquisition()
+            machine_class.connection_data_display()
+            machine_class.dashboard_data_display()
+            print('\n'*2)
 
 
 
