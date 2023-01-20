@@ -6,6 +6,12 @@ machines_names = {
             'name': 'HA',
             'ip': '192.168.10.11',
             'port': 40020,
+            'address':
+                {
+                    'master_on_address': 'M6',
+                    'machine_status_address': 'M44',
+                    'mct_address': 'D50080',
+                },
             'target_network': None,
             'plc_id_in_target_network': None
          },
@@ -16,6 +22,12 @@ machines_names = {
             'name': 'DA',
             'ip': '192.168.10.31',
             'port': 40020,
+            'address':
+                {
+                    'master_on_address': 'M6',
+                    'machine_status_address': 'M44',
+                    'mct_address': 'D50080',
+                },
             'target_network': None,
             'plc_id_in_target_network': None
          },
@@ -26,6 +38,12 @@ machines_names = {
             'name': 'HB',
             'ip': '192.168.10.61',
             'port': 40020,
+            'address':
+                {
+                    'master_on_address': 'M10',
+                    'machine_status_address': 'M1023',
+                    'mct_address': 'D7210',
+                },
             'target_network': None,
             'plc_id_in_target_network': None
         },
@@ -36,6 +54,12 @@ machines_names = {
             'name': 'DB',
             'ip': '192.168.10.71',
             'port': 40020,
+            'address':
+                {
+                    'master_on_address': 'M10',
+                    'machine_status_address': 'M1023',
+                    'mct_address': 'D7210',
+                },
             'target_network': None,
             'plc_id_in_target_network': None
         },
@@ -46,6 +70,12 @@ machines_names = {
             'name': 'BOTTLE',
             'ip': '192.168.10.51',
             'port': 40020,
+            'address':
+                {
+                    'master_on_address': 'M6',
+                    'machine_status_address': 'M44',
+                    'mct_address': 'D50080',
+                },
             'target_network': None,
             'plc_id_in_target_network': None
         },
@@ -56,6 +86,12 @@ machines_names = {
             'name': 'SB',
             'ip': '192.168.10.91',
             'port': 40020,
+            'address':
+                {
+                    'master_on_address': 'M6',
+                    'machine_status_address': 'M44',
+                    'mct_address': 'D50080',
+                },
             'target_network': None,
             'plc_id_in_target_network': None
         },
@@ -66,6 +102,12 @@ machines_names = {
             'name': 'COOL',
             'ip': '192.168.10.81',
             'port': 40020,
+            'address':
+                {
+                    'master_on_address': 'M6',
+                    'machine_status_address': 'M44',
+                    'mct_address': 'D50080',
+                },
             'target_network': None,
             'plc_id_in_target_network': None
         },
@@ -76,6 +118,12 @@ machines_names = {
             'name': 'GF1',
             'ip': '192.168.10.111',
             'port': 40020,
+            'address':
+                {
+                    'master_on_address': 'M100',
+                    'machine_status_address': 'M4',
+                    'mct_address': 'D7610',
+                },
             'target_network': None,
             'plc_id_in_target_network': None
         },
@@ -86,6 +134,12 @@ machines_names = {
             'name': 'GF2',
             'ip': '192.168.10.121',
             'port': 40020,
+            'address':
+                {
+                    'master_on_address': 'M100',
+                    'machine_status_address': 'M4',
+                    'mct_address': 'D7610',
+                },
             'target_network': None,
             'plc_id_in_target_network': None
         },
@@ -96,6 +150,12 @@ machines_names = {
             'name': 'GF3',
             'ip': '192.168.10.131',
             'port': 40020,
+            'address':
+                {
+                    'master_on_address': 'M100',
+                    'machine_status_address': 'M4',
+                    'mct_address': 'D7610',
+                },
             'target_network': None,
             'plc_id_in_target_network': None
         },
@@ -106,6 +166,12 @@ machines_names = {
             'name': 'Pre-Post',
             'ip': '192.168.10.101',
             'port': 40020,
+            'address':
+                {
+                    'master_on_address': 'M6',
+                    'machine_status_address': 'M44',
+                    'mct_address': 'D50080',
+                },
             'target_network': None,
             'plc_id_in_target_network': None
         },
@@ -116,6 +182,12 @@ machines_names = {
             'name': 'HC',
             'ip': '192.168.10.141',
             'port': 40020,
+            'address':
+                {
+                    'master_on_address': 'M6',
+                    'machine_status_address': 'M44',
+                    'mct_address': 'D50080',
+                },
             'target_network': None,
             'plc_id_in_target_network': None
         },
@@ -126,6 +198,12 @@ machines_names = {
             'name': 'HEL',
             'ip': '192.168.10.151',
             'port': 40020,
+            'address':
+                {
+                    'master_on_address': 'M6',
+                    'machine_status_address': 'M44',
+                    'mct_address': 'D50080',
+                },
             'target_network': None,
             'plc_id_in_target_network': None
         },
@@ -136,6 +214,12 @@ machines_names = {
             'name': 'GG',
             'ip': '192.168.10.161',
             'port': 40020,
+            'address':
+                {
+                    'master_on_address': 'M6',
+                    'machine_status_address': 'M44',
+                    'mct_address': 'D50080',
+                },
             'target_network': None,
             'plc_id_in_target_network': None
         },
@@ -146,6 +230,12 @@ machines_names = {
             'name': 'IC',
             'ip': '192.168.10.171',
             'port': 40020,
+            'address':
+                {
+                    'master_on_address': 'M6',
+                    'machine_status_address': 'M44',
+                    'mct_address': 'D50080',
+                },
             'target_network': None,
             'plc_id_in_target_network': None
         },
@@ -156,6 +246,12 @@ machines_names = {
             'name': 'ET',
             'ip': '192.168.10.191',
             'port': 40020,
+            'address':
+                {
+                    'master_on_address': 'M6',
+                    'machine_status_address': 'M44',
+                    'mct_address': 'D50080',
+                },
             'target_network': None,
             'plc_id_in_target_network': None
         },
@@ -166,6 +262,12 @@ machines_names = {
             'name': 'AL',
             'ip': '192.168.10.181',
             'port': 40020,
+            'address':
+                {
+                    'master_on_address': 'M6',
+                    'machine_status_address': 'M44',
+                    'mct_address': 'D50080',
+                },
             'target_network': None,
             'plc_id_in_target_network': None
         },
@@ -176,6 +278,12 @@ machines_names = {
             'name': 'LBL',
             'ip': '192.168.10.201',
             'port': 40020,
+            'address':
+                {
+                    'master_on_address': 'M6',
+                    'machine_status_address': 'M44',
+                    'mct_address': 'D50080',
+                },
             'target_network': None,
             'plc_id_in_target_network': None
         },
