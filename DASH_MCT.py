@@ -19,32 +19,17 @@ def create_machine_classes():
 
 print('Started at..', os.path.dirname(os.path.abspath(__file__)))
 list_of_machine_classes = create_machine_classes()
-
+full_loop_memory = []
 while True:
+    starto = time.time()
     for machine_class in list_of_machine_classes:
         try:
-            machine_class.connect()
+
+            machine_class.dashboard_data_acquisition()
+            machine_class.dashboard_data_report_to_sql()
         except:
             continue
-        else:
-            machine_class.dashboard_data_acquisition()
-            machine_class.connection_data_display()
-            machine_class.dashboard_data_display()
-            print('\n'*2)
-
-
-
-    # cnxn = pyodbc.connect(
-    #     'DRIVER=FreeTDS;SERVER=159.228.208.243;PORT=1433;DATABASE=mapsData;UID=python;PWD=Daicel@DSSE;Encrypt=no',
-    #     timeout=1
-    # )
-    # cursor = cnxn.cursor()
-    # cursor.execute(f'INSERT INTO tMapsMCTs (idLine,idMachines,MCT) VALUES ({Housing_Assembly.id_line},'
-    #                f'{Housing_Assembly.id_machine},{Housing_Assembly.dashboard_data["mct"]})')
-    # cnxn.commit()
-    # data = pd.read_sql("SELECT TOP(100) * FROM tMapsMCTs ORDER BY ReportDate DESC", cnxn)
-    # del cnxn
-    # print(data)
-
-    time.sleep(5)
+    endo = time.time()
+    print(f'Full scan time: {endo-starto}')
+    time.sleep(0)
 

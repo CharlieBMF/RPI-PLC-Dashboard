@@ -41,7 +41,7 @@ machines_names = {
             'address':
                 {
                     'master_on_address': 'M10',
-                    'machine_status_address': 'M1023',
+                    'machine_status_address': 'M1022',
                     'mct_address': 'D7200',
                 },
             'target_network': None,
@@ -57,7 +57,7 @@ machines_names = {
             'address':
                 {
                     'master_on_address': 'M10',
-                    'machine_status_address': 'M1023',
+                    'machine_status_address': 'M1022',
                     'mct_address': 'D7200',
                 },
             'target_network': None,
@@ -121,7 +121,7 @@ machines_names = {
             'address':
                 {
                     'master_on_address': 'M100',
-                    'machine_status_address': 'M4',
+                    'machine_status_address': 'M24',
                     'mct_address': 'D7600',
                 },
             'target_network': None,
@@ -137,7 +137,7 @@ machines_names = {
             'address':
                 {
                     'master_on_address': 'M100',
-                    'machine_status_address': 'M4',
+                    'machine_status_address': 'M24',
                     'mct_address': 'D7600',
                 },
             'target_network': None,
@@ -153,7 +153,7 @@ machines_names = {
             'address':
                 {
                     'master_on_address': 'M100',
-                    'machine_status_address': 'M4',
+                    'machine_status_address': 'M24',
                     'mct_address': 'D7600',
                 },
             'target_network': None,
@@ -260,6 +260,7 @@ machines_names = {
             'id_line': 33,
             'id_machine': 243,
             'name': 'AL',
+
             'ip': '192.168.10.181',
             'port': 40020,
             'address':

@@ -1,4 +1,17 @@
 import pymcprotocol
+import pyodbc
+import time
+
+
+def time_wrapper(func):
+    def wrap(*args, **kwargs):
+        start = time.time()
+        result = func(*args, **kwargs)
+        end = time.time()
+        if end-start > 1:
+            print(f'Func {func.__name__} started: {start} finished: {end} Time: {end-start}')
+        return result
+    return wrap
 
 
 class Machine:
@@ -41,6 +54,7 @@ class Machine:
     def read_random_words(self, word_devices, double_word_devices):
         return self.machine.randomread(word_devices=word_devices, dword_devices=double_word_devices)
 
+    @time_wrapper
     def dashboard_data_acquisition(self):
         self.connect()
         if self.master_on_address and self.machine_status_address and self.mct_address:
@@ -64,6 +78,44 @@ class Machine:
             self.dashboard_data_report_request['machine_status'] = True
         if mct_value != self.dashboard_data['mct']:
             self.dashboard_data_report_request['mct'] = True
+
+    def dashboard_data_report_to_sql(self):
+        if self.dashboard_data_report_request['master_on'] or self.dashboard_data_report_request['machine_status']:
+            string = f'INSERT INTO tMapsMachineStatus (idLine,idMachines,MasterOn,AutoStart) VALUES ' \
+                     f'({self.id_line}, ' \
+                     f'{self.id_machine}, ' \
+                     f'{self.dashboard_data["master_on"]},' \
+                     f' {self.dashboard_data["machine_status"]})'
+            self.sql_execute_insert(string)
+        if self.dashboard_data_report_request['mct']:
+            string = f'INSERT INTO tMapsMCTs (idLine,idMachines,MCT) VALUES ' \
+                     f'({self.id_line}, ' \
+                     f'{self.id_machine}, ' \
+                     f'{self.dashboard_data["mct"]})'
+            self.sql_execute_insert(string)
+
+    @time_wrapper
+    def sql_execute_insert(self, string):
+        cnxn = pyodbc.connect(
+            'DRIVER=FreeTDS;'
+            'SERVER=159.228.208.243;'
+            'PORT=1433;'
+            'DATABASE=mapsData;'
+            'UID=python;'
+            'PWD=Daicel@DSSE;Encrypt=no',
+            timeout=1
+        )
+        cursor = cnxn.cursor()
+        cursor.execute(string)
+        cnxn.commit()
+        del cnxn
+        if 'tMapsMachineStatus' in string:
+            self.dashboard_data_report_request['master_on'] = False
+            self.dashboard_data_report_request['machine_status'] = False
+            print(f'Reported (master on) (machine status) on {self.name}')
+        elif 'tMapsMCTs' in string:
+            self.dashboard_data_report_request['mct'] = False
+            print(f'Reported (mct) on {self.name}')
 
     def dashboard_data_display(self):
         print(
