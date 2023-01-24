@@ -50,7 +50,7 @@
     <script async src="http://qa.flow.hydra.dsse.local/js/knock.js"></script>
 
 </head>
-<body class="tv" style="height:480px;" >
+<body class="tv" style="height:100%" >
     <div id="tvHeader" data-raspberry-id="">
         <img class="logo" src="/gfx/hydra_logo.png" alt="HYDRA dashboard" />
         <span class="appName">hydra <em>dashboard</em></span>
@@ -58,14 +58,13 @@
     </div>
 
 
-<div class="col-md-6 lineContainer" >
-    <h1>ES3 - SUB</h1>
-    <table class="productionLine" >
+<div class="col-md-8 lineContainer "  >
 
-        <tr>
-        <td class="green">
-            <span class="machineName">HB<small>Housing bottle</small></span>
-            <span class="machineParams">
+    <table class="productionLine " >
+        <tr >
+            <td class="green row row-cols-lg-auto g-3 align-items-center">
+                <span class="machineName">HB</span>
+                <span class="machineParams">
                     <span class="machineParamLeft">
                         <img src="/gfx/icon_96_working.png" alt="status" width="64" />
                     </span>
@@ -74,9 +73,9 @@
                     </span>
                     <span class="spacer"></span>
                 </span>
-        </td>
+            </td>
             <td rowspan=2 class="green">
-                <span class="machineName">transfer HB DB</span>
+                <span class="machineName">Transfer butli</span>
                 <span class="machineParams">
                     <span class="machineParamLeft">
                         <img src="/gfx/icon_96_warning.png" alt="status" width="64" />
@@ -88,7 +87,7 @@
                 </span>
             </td>
             <td class="green">
-                <span class="machineName">HA<small>Housing assy</small></span>
+                <span class="machineName">HA</span>
                 <span class="machineParams">
                     <span class="machineParamLeft">
                         <img src="/gfx/icon_96_working.png" alt="status" width="64" />
@@ -99,11 +98,10 @@
                     <span class="spacer"></span>
                 </span>
             </td>
-            </tr>
-
+        </tr>
         <tr>
             <td class="green">
-            <span class="machineName">DB<small>Diffuser bottle</small></span>
+                <span class="machineName">DB</span>
                 <span class="machineParams">
                     <span class="machineParamLeft">
                         <img src="/gfx/icon_96_working.png" alt="status" width="64" />
@@ -115,7 +113,7 @@
                 </span>
             </td>
             <td class="orange">
-                <span class="machineName">DA<small>Diffuser assy</small></span>
+                <span class="machineName">DA</span>
                 <span class="machineParams">
                     <span class="machineParamLeft">
                         <img src="/gfx/icon_96_slow.png" alt="status" width="64" />
@@ -129,7 +127,7 @@
         </tr>
         <tr>
             <td class="red">
-                <span class="machineName">SB<small>Stud bolt</small></span>
+                <span class="machineName">SB</span>
                 <span class="machineParams">
                     <span class="machineParamLeft">
                         <img src="/gfx/icon_96_warning.png" alt="status" width="64" />
@@ -167,7 +165,7 @@
                 </span>
             </td>
             <td class="orange" rowspan=3>
-                <span class="machineName">transfer GF</span>
+                <span class="machineName">Transfer GF</span>
                 <span class="machineParams">
                     <span class="machineParamLeft">
                         <img src="/gfx/icon_96_warning.png" alt="status" width="64" />
@@ -180,7 +178,7 @@
             </td>
         </tr>
         <tr>
-                       <td class="red">
+            <td class="red">
                 <span class="machineName">GF #2</span>
                 <span class="machineParams">
                     <span class="machineParamLeft">
@@ -193,8 +191,8 @@
                 </span>
             </td>
         </tr>
-                <tr>
-                       <td class="orange">
+        <tr>
+            <td class="orange">
                 <span class="machineName">GF #3</span>
                 <span class="machineParams">
                     <span class="machineParamLeft">
@@ -208,9 +206,8 @@
             </td>
         </tr>
         <tr>
-
             <td colspan=2>
-                <span class="machineName">Heat<small>Heat chamber</small></span>
+                <span class="machineName">Heat</span>
                 <span class="machineParams">
                     <span class="machineParamLeft">
                         <img src="/gfx/icon_96_poweroff.png" alt="status" width="64" />
@@ -225,7 +222,7 @@
         <tr>
             <td></td>
             <td class="green">
-                                <span class="machineName">Hel<small>Helium leak</small></span>
+                                <span class="machineName">Hel</span>
                 <span class="machineParams">
                     <span class="machineParamLeft">
                         <img src="/gfx/icon_96_poweroff.png" alt="status" width="64" />
@@ -238,194 +235,82 @@
 
             </td>
         </tr>
-
     </table>
 </div>
+    <div class="col-md-4 lineContainer">
 
-
-    <div class="col-md-6 lineContainer">
-        <h1>ES3 - MAIN</h1>
            <table class="productionLine" >
-        <tr>
-        <td class="green">
-            <span class="machineName">HB<small>Housing bottle</small></span>
-            <span class="machineParams">
-                    <span class="machineParamLeft">
-                        <img src="/gfx/icon_96_working.png" alt="status" width="64" />
-                    </span>
-                    <span class="machineParamRight">
-                        <strong>5,4</strong>Auto start
-                    </span>
-                    <span class="spacer"></span>
-                </span>
-        </td>
-            <td rowspan=2 class="green">
-                <span class="machineName">transfer HB DB</span>
-                <span class="machineParams">
-                    <span class="machineParamLeft">
-                        <img src="/gfx/icon_96_warning.png" alt="status" width="64" />
-                    </span>
-                    <span class="machineParamRight">
-                        <strong>0,0</strong>Master ON
-                    </span>
-                    <span class="spacer"></span>
-                </span>
-            </td>
-            <td class="green">
-                <span class="machineName">HA<small>Housing assy</small></span>
-                <span class="machineParams">
-                    <span class="machineParamLeft">
-                        <img src="/gfx/icon_96_working.png" alt="status" width="64" />
-                    </span>
-                    <span class="machineParamRight">
-                        <strong>5,4</strong>Auto start
-                    </span>
-                    <span class="spacer"></span>
-                </span>
-            </td>
-            </tr>
-
-        <tr>
-            <td class="green">
-            <span class="machineName">DB<small>Diffuser bottle</small></span>
-                <span class="machineParams">
-                    <span class="machineParamLeft">
-                        <img src="/gfx/icon_96_working.png" alt="status" width="64" />
-                    </span>
-                    <span class="machineParamRight">
-                        <strong>6,9</strong>Auto start
-                    </span>
-                    <span class="spacer"></span>
-                </span>
-            </td>
-            <td class="orange">
-                <span class="machineName">DA<small>Diffuser assy</small></span>
-                <span class="machineParams">
-                    <span class="machineParamLeft">
-                        <img src="/gfx/icon_96_slow.png" alt="status" width="64" />
-                    </span>
-                    <span class="machineParamRight">
-                        <strong>12,8</strong>Auto start
-                    </span>
-                    <span class="spacer"></span>
-                </span>
-            </td>
-        </tr>
-        <tr>
-            <td class="red">
-                <span class="machineName">SB<small>Stud bolt</small></span>
-                <span class="machineParams">
-                    <span class="machineParamLeft">
-                        <img src="/gfx/icon_96_warning.png" alt="status" width="64" />
-                    </span>
-                    <span class="machineParamRight">
-                        <strong>0,0</strong>Master ON
-                    </span>
-                    <span class="spacer"></span>
-                </span>
-            </td>
-            <td >
-                <span class="machineName">Cooling</span>
-                <span class="machineParams">
-                    <span class="machineParamLeft">
-                        <img src="/gfx/icon_96_poweroff.png" alt="status" width="64" />
-                    </span>
-                    <span class="machineParamRight">
-                        <strong>-,-</strong>Stopped
-                    </span>
-                    <span class="spacer"></span>
-                </span>
-            </td>
-        </tr>
-        <tr>
-            <td class="green">
-                <span class="machineName">GF #1</span>
-                <span class="machineParams">
-                    <span class="machineParamLeft">
-                        <img src="/gfx/icon_96_poweroff.png" alt="status" width="64" />
-                    </span>
-                    <span class="machineParamRight">
-                        <strong>-,-</strong>Stopped
-                    </span>
-                    <span class="spacer"></span>
-                </span>
-            </td>
-            <td class="orange" rowspan=3>
-                <span class="machineName">transfer GF</span>
-                <span class="machineParams">
-                    <span class="machineParamLeft">
-                        <img src="/gfx/icon_96_warning.png" alt="status" width="64" />
-                    </span>
-                    <span class="machineParamRight">
-                        <strong>0,0</strong>Master ON
-                    </span>
-                    <span class="spacer"></span>
-                </span>
-            </td>
-        </tr>
-        <tr>
-                       <td class="red">
-                <span class="machineName">GF #2</span>
-                <span class="machineParams">
-                    <span class="machineParamLeft">
-                        <img src="/gfx/icon_96_poweroff.png" alt="status" width="64" />
-                    </span>
-                    <span class="machineParamRight">
-                        <strong>-,-</strong>Stopped
-                    </span>
-                    <span class="spacer"></span>
-                </span>
-            </td>
-        </tr>
-                <tr>
-                       <td class="orange">
-                <span class="machineName">GF #3</span>
-                <span class="machineParams">
-                    <span class="machineParamLeft">
-                        <img src="/gfx/icon_96_poweroff.png" alt="status" width="64" />
-                    </span>
-                    <span class="machineParamRight">
-                        <strong>-,-</strong>Stopped
-                    </span>
-                    <span class="spacer"></span>
-                </span>
-            </td>
-        </tr>
-        <tr>
-
-            <td colspan=2>
-                <span class="machineName">Heat<small>Heat chamber</small></span>
-                <span class="machineParams">
-                    <span class="machineParamLeft">
-                        <img src="/gfx/icon_96_poweroff.png" alt="status" width="64" />
-                    </span>
-                    <span class="machineParamRight">
-                        <strong>-,-</strong>Stopped
-                    </span>
-                    <span class="spacer"></span>
-                </span>
-            </td>
-        </tr>
-        <tr>
-            <td></td>
-            <td class="green">
-                                <span class="machineName">Hel<small>Helium leak</small></span>
-                <span class="machineParams">
-                    <span class="machineParamLeft">
-                        <img src="/gfx/icon_96_poweroff.png" alt="status" width="64" />
-                    </span>
-                    <span class="machineParamRight">
-                        <strong>-,-</strong>Stopped
-                    </span>
-                    <span class="spacer"></span>
-                </span>
-
-            </td>
-        </tr>
-
-    </table>
+               <tr>
+                    <td class="orange">
+                        <span class="machineName">LBL<small>Labels sticking</small></span>
+                        <span class="machineParams">
+                            <span class="machineParamLeft">
+                                <img src="/gfx/icon_96_slow.png" alt="status" width="64" />
+                            </span>
+                            <span class="machineParamRight">
+                                <strong>13,5</strong>Auto start
+                            </span>
+                            <span class="spacer"></span>
+                        </span>
+                    </td>
+               </tr>
+               <tr>
+                   <td class="green">
+                        <span class="machineName">AL<small>Air leak</small></span>
+                        <span class="machineParams">
+                            <span class="machineParamLeft">
+                                <img src="/gfx/icon_96_working.png" alt="status" width="64" />
+                            </span>
+                            <span class="machineParamRight">
+                                <strong>5,4</strong>Auto start
+                            </span>
+                            <span class="spacer"></span>
+                        </span>
+                    </td>
+               </tr>
+               <tr>
+                   <td class="green">
+                        <span class="machineName">SC/ET<small>Shorting clip / E-test</small></span>
+                        <span class="machineParams">
+                            <span class="machineParamLeft">
+                                <img src="/gfx/icon_96_working.png" alt="status" width="64" />
+                            </span>
+                            <span class="machineParamRight">
+                                <strong>5,4</strong>Auto start
+                            </span>
+                            <span class="spacer"></span>
+                        </span>
+                    </td>
+               </tr>
+               <tr>
+                   <td>
+                        <span class="machineName">IC<small>Initiator crimping</small></span>
+                        <span class="machineParams">
+                            <span class="machineParamLeft">
+                                <img src="/gfx/icon_96_poweroff.png" alt="status" width="64" />
+                            </span>
+                            <span class="machineParamRight">
+                                <strong>5,4</strong>Auto start
+                            </span>
+                            <span class="spacer"></span>
+                        </span>
+                    </td>
+               </tr>
+               <tr>
+                   <td class="green">
+                        <span class="machineName">GG<small>Propellant filling</small></span>
+                        <span class="machineParams">
+                            <span class="machineParamLeft">
+                                <img src="/gfx/icon_96_working.png" alt="status" width="64" />
+                            </span>
+                            <span class="machineParamRight">
+                                <strong>5,4</strong>Auto start
+                            </span>
+                            <span class="spacer"></span>
+                        </span>
+                    </td>
+               </tr>
+            </table>
     </div>
-</div>
-
-        </body>
+</body>
 </html>

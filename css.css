@@ -378,8 +378,8 @@ table.productionLine {
             width: 50%;
             float: left;
             box-sizing: border-box;
-            padding: 10px;
-            line-height: 36px;
+            padding: 0px;
+            line-height: 24px;
         }
 
             table.productionLine tr td .machineParams span strong {
@@ -399,8 +399,8 @@ table.productionLine {
     table.productionLine tr td .machineName {
         font-size: 48px;
         font-weight: bold;
-        padding-top: 20px;
-        padding-bottom: 200px;
+        padding-top: 0px;
+        padding-bottom: 50px;
         display: block;
         line-height: 1em;
     }
