@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'dashboard.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'sql_server.pyodbc',
+        'ENGINE': 'mssql',
         'NAME': 'mapsData',
         'HOST': '159.228.208.243',
         'PORT': '1433',
