@@ -74,13 +74,29 @@ WSGI_APPLICATION = 'dashboard.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+        'ENGINE': 'sql_server.pyodbc',
+        'NAME': 'mapsData',
+        'HOST': '159.228.208.243',
+        'PORT': '1433',
+        'USER': 'python',
+        'PASSWORD': 'Daicel@DSSE',
+        # Ignored for Windows; Required for Linux
+        'OPTIONS': {
+            # ODBC driver name in /etc/odbcinst.ini
+            'driver': 'FreeTDS',
+            'host_is_server': True,
+        },
+    },
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
