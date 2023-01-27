@@ -18,11 +18,16 @@ def main(request):
         'PWD=Daicel@DSSE;Encrypt=no',
         timeout=1
     )
+
+    answer = {}
+    data = pd.read_sql("select * from tMachinesForMaps WHERE (idLine=32 OR idLine=33)", cnxn)
     del cnxn
-    data = pd.read_sql("select * from tMachinesForMaps WHERE idLine=32", cnxn)
     for machine in machines_names.keys():
-        pass
-        
-    return render(request, 'dashboard_mct_new.html')
+        answer[machine] = {'MasterOn': data[data['id'] == machines_names[machine]['id_machine']].iloc[0]['MasterOn'],
+                           'AutoStart': data[data['id'] == machines_names[machine]['id_machine']].iloc[0]['AutoStart'],
+                           'mct': data[data['id'] == machines_names[machine]['id_machine']].iloc[0]['RealMCT']}
+        print(answer)
+
+    return render(request, 'dashboard_mct_new.html', answer)
 
 

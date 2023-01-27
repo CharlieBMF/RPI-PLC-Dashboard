@@ -9,6 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <meta http-equiv="refresh" content="28800">
+     <meta http-equiv="refresh" content="3">
 
     <title>HYDRA production dashboard</title>
     <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
@@ -24,260 +25,365 @@
         <img class="dsse" src="/gfx/dsse.png" alt="DSSE" />
     </div>
 
-
 <div class="col-md-8 lineContainer "  >
 
     <table class="productionLine " >
         <tr >
-            <td class="green">
+            {% if Housing_Bottle_Welding.AutoStart %}
+                <td class="green">
+                    {% else %}
+                <td class="red">
+            {% endif %}
                 <span class="machineName">HB</span>
-                <span class="machineParams">
-                    <span class="machineParamLeft">
-                        <img src="/gfx/icon_96_working.png" alt="status" width="64" />
-                    </span>
-                    <span class="machineParamRight">
-                        <strong>5,4</strong>Auto start
-                    </span>
+                    <span class="machineParams">
+                        <span class="machineParamRight">
+                            <strong>{{ Housing_Bottle_Welding.mct }}</strong>
+                            {% if Housing_Bottle_Welding.AutoStart %}
+                                Auto start ON
+                            {% else %}
+                                Auto start OFF
+                            {% endif %}
+                        </span>
                     <span class="spacer"></span>
-                </span>
-            </td>
-            <td rowspan=2 class="green">
+                    </span>
+                </td>
+            {% if Transfer_HB_DB.AutoStart %}
+                <td rowspan=2 class="green">
+                    {% else %}
+                <td rowspan=2 class="red">
+            {% endif %}
                 <span class="machineName" style="padding-top:30px;">Transfer butli</span>
-                <span class="machineParams" style="bottom:30px">
-                    <span class="machineParamLeft">
-                        <img src="/gfx/icon_96_warning.png" alt="status" width="64" />
-                    </span>
-                    <span class="machineParamRight">
-                        <strong>0,0</strong>Master ON
-                    </span>
+                    <span class="machineParams" style="bottom:30px">
+                        <span class="machineParamRight">
+                            <strong>{{ Transfer_HB_DB.mct }}</strong>
+                            {% if Transfer_HB_DB.AutoStart %}
+                                Auto start ON
+                            {% else %}
+                                Auto start OFF
+                            {% endif %}
+                        </span>
                     <span class="spacer"></span>
-                </span>
-            </td>
-            <td class="green">
+                    </span>
+                </td>
+            {% if Housing_Assembly.AutoStart %}
+                <td class="green">
+                    {% else %}
+                <td class="red">
+            {% endif %}
                 <span class="machineName">HA</span>
-                <span class="machineParams">
-                    <span class="machineParamLeft">
-                        <img src="/gfx/icon_96_working.png" alt="status" width="64" />
-                    </span>
-                    <span class="machineParamRight">
-                        <strong>5,4</strong>Auto start
-                    </span>
+                    <span class="machineParams">
+                        <span class="machineParamRight">
+                            <strong>{{ Housing_Assembly.mct }}</strong>
+                            {% if Housing_Assembly.AutoStart %}
+                                Auto start ON
+                            {% else %}
+                                Auto start OFF
+                            {% endif %}
+                        </span>
                     <span class="spacer"></span>
-                </span>
+                    </span>
             </td>
         </tr>
         <tr>
-            <td class="green">
+            {% if Diffuser_Bottle_Welding.AutoStart %}
+                <td class="green">
+                    {% else %}
+                <td class="red">
+            {% endif %}
                 <span class="machineName">DB</span>
                 <span class="machineParams">
-                    <span class="machineParamLeft">
-                        <img src="/gfx/icon_96_working.png" alt="status" width="64" />
-                    </span>
                     <span class="machineParamRight">
-                        <strong>6,9</strong>Auto start
+                        <strong>{{ Diffuser_Bottle_Welding.mct }}</strong>
+                        {% if Diffuser_Bottle_Welding.AutoStart %}
+                        Auto start ON
+                        {% else %}
+                        Auto start OFF
+                        {% endif %}
                     </span>
                     <span class="spacer"></span>
                 </span>
             </td>
-            <td class="orange">
+            {% if Diffuser_Assembly.AutoStart %}
+                <td class="green">
+                    {% else %}
+                <td class="red">
+            {% endif %}
                 <span class="machineName">DA</span>
                 <span class="machineParams">
-                    <span class="machineParamLeft">
-                        <img src="/gfx/icon_96_slow.png" alt="status" width="64" />
-                    </span>
-                    <span class="machineParamRight">
-                        <strong>12,8</strong>Auto start
+                     <span class="machineParamRight">
+                        <strong>{{ Diffuser_Assembly.mct }}</strong>
+                        {% if Diffuser_Assembly.AutoStart %}
+                        Auto start ON
+                        {% else %}
+                        Auto start OFF
+                        {% endif %}
                     </span>
                     <span class="spacer"></span>
                 </span>
-            </td>
+                </td>
         </tr>
         <tr>
-            <td class="red">
+            {% if Stud_Bolt.AutoStart %}
+                <td class="green">
+                    {% else %}
+                <td class="red">
+            {% endif %}
                 <span class="machineName">SB</span>
-                <span class="machineParams">
-                    <span class="machineParamLeft">
-                        <img src="/gfx/icon_96_warning.png" alt="status" width="64" />
-                    </span>
-                    <span class="machineParamRight">
-                        <strong>0,0</strong>Master ON
-                    </span>
+                    <span class="machineParams">
+                        <span class="machineParamRight">
+                            <strong>{{ Stud_Bolt.mct }}</strong>
+                            {% if Stud_Bolt.AutoStart %}
+                                Auto start ON
+                            {% else %}
+                                Auto start OFF
+                            {% endif %}
+                        </span>
                     <span class="spacer"></span>
-                </span>
-            </td>
-            <td >
+                    </span>
+                </td>
+            {% if Cooling.AutoStart %}
+                <td class="green">
+                    {% else %}
+                <td class="red">
+            {% endif %}
                 <span class="machineName" >Cooling</span>
-                <span class="machineParams">
-                    <span class="machineParamLeft">
-                        <img src="/gfx/icon_96_poweroff.png" alt="status" width="64" />
-                    </span>
-                    <span class="machineParamRight">
-                        <strong>-,-</strong>Stopped
-                    </span>
+                    <span class="machineParams">
+                        <span class="machineParamRight">
+                            <strong>{{ Cooling.mct }}</strong>
+                            {% if Cooling.AutoStart %}
+                                Auto start ON
+                            {% else %}
+                                Auto start OFF
+                            {% endif %}
+                        </span>
                     <span class="spacer"></span>
                 </span>
-            </td>
+                </td>
         </tr>
         <tr>
-            <td class="green">
+            {% if Gas_filling_1.AutoStart %}
+                <td class="green">
+                    {% else %}
+                <td class="red">
+            {% endif %}
                 <span class="machineName">GF #1</span>
-                <span class="machineParams">
-                    <span class="machineParamLeft">
-                        <img src="/gfx/icon_96_poweroff.png" alt="status" width="64" />
-                    </span>
-                    <span class="machineParamRight">
-                        <strong>-,-</strong>Stopped
-                    </span>
+                    <span class="machineParams">
+                        <span class="machineParamRight">
+                            <strong>{{ Gas_filling_1.mct }}</strong>
+                            {% if Gas_filling_1.AutoStart %}
+                                Auto start ON
+                            {% else %}
+                                Auto start OFF
+                            {% endif %}
+                        </span>
                     <span class="spacer"></span>
                 </span>
-            </td>
-            <td class="orange" rowspan=3>
+                </td>
+            {% if Pre_Post_Weight.AutoStart %}
+                <td class="green" rowspan=3>
+                    {% else %}
+                <td class="red" rowspan=3>
+            {% endif %}
                 <span class="machineName" style="padding-top:80px">Transfer GF</span>
-                <span class="machineParams" style="bottom:80px">
-                    <span class="machineParamLeft">
-                        <img src="/gfx/icon_96_warning.png" alt="status" width="64" />
-                    </span>
-                    <span class="machineParamRight">
-                        <strong>0,0</strong>Master ON
-                    </span>
+                    <span class="machineParams" style="bottom:80px">
+                        <span class="machineParamRight">
+                            <strong>{{ Pre_Post_Weight.mct }}</strong>
+                            {% if Pre_Post_Weight.AutoStart %}
+                                Auto start ON
+                            {% else %}
+                                Auto start OFF
+                            {% endif %}
+                        </span>
                     <span class="spacer"></span>
                 </span>
-            </td>
+                </td>
         </tr>
         <tr>
-            <td class="red">
+            {% if Gas_filling_2.AutoStart %}
+                <td class="green">
+                    {% else %}
+                <td class="red">
+            {% endif %}
                 <span class="machineName">GF #2</span>
-                <span class="machineParams">
-                    <span class="machineParamLeft">
-                        <img src="/gfx/icon_96_poweroff.png" alt="status" width="64" />
-                    </span>
-                    <span class="machineParamRight">
-                        <strong>-,-</strong>Stopped
-                    </span>
+                    <span class="machineParams">
+                        <span class="machineParamRight">
+                            <strong>{{ Gas_filling_2.mct }}</strong>
+                            {% if Gas_filling_2.AutoStart %}
+                                Auto start ON
+                            {% else %}
+                                Auto start OFF
+                            {% endif %}
+                        </span>
                     <span class="spacer"></span>
                 </span>
-            </td>
+                </td>
         </tr>
         <tr>
-            <td class="orange">
+            {% if Gas_filling_3.AutoStart %}
+                <td class="green">
+                    {% else %}
+                <td class="red">
+            {% endif %}
                 <span class="machineName">GF #3</span>
-                <span class="machineParams">
-                    <span class="machineParamLeft">
-                        <img src="/gfx/icon_96_poweroff.png" alt="status" width="64" />
-                    </span>
-                    <span class="machineParamRight">
-                        <strong>-,-</strong>Stopped
-                    </span>
+                    <span class="machineParams">
+                        <span class="machineParamRight">
+                            <strong>{{ Gas_filling_3.mct }}</strong>
+                            {% if Gas_filling_3.AutoStart %}
+                                Auto start ON
+                            {% else %}
+                                Auto start OFF
+                            {% endif %}
+                        </span>
                     <span class="spacer"></span>
-                </span>
-            </td>
+                    </span>
+                </td>
         </tr>
         <tr>
-            <td colspan=2>
+            {% if Heat_Chamber.AutoStart %}
+                <td class="green" colspan=2>
+                    {% else %}
+                <td class="red" colspan=2>
+            {% endif %}
                 <span class="machineName">Heat</span>
-                <span class="machineParams">
-                    <span class="machineParamLeft">
-                        <img src="/gfx/icon_96_poweroff.png" alt="status" width="64" />
-                    </span>
-                    <span class="machineParamRight">
-                        <strong>-,-</strong>Stopped
-                    </span>
+                    <span class="machineParams">
+                        <span class="machineParamRight">
+                            <strong>{{ Heat_Chamber.mct }}</strong>
+                            {% if Heat_Chamber.AutoStart %}
+                                Auto start ON
+                            {% else %}
+                                Auto start OFF
+                            {% endif %}
+                        </span>
                     <span class="spacer"></span>
                 </span>
             </td>
         </tr>
         <tr>
             <td></td>
-            <td class="green">
-                                <span class="machineName">Hel</span>
+            {% if Helium_Leak_Tester.AutoStart %}
+                <td class="green">
+                    {% else %}
+                <td class="red">
+            {% endif %}
+            <span class="machineName">Hel</span>
                 <span class="machineParams">
-                    <span class="machineParamLeft">
-                        <img src="/gfx/icon_96_poweroff.png" alt="status" width="64" />
-                    </span>
                     <span class="machineParamRight">
-                        <strong>-,-</strong>Stopped
+                        <strong>{{ Helium_Leak_Tester.mct }}</strong>
+                            {% if Helium_Leak_Tester.AutoStart %}
+                                Auto start ON
+                            {% else %}
+                                Auto start OFF
+                            {% endif %}
                     </span>
                     <span class="spacer"></span>
                 </span>
-
             </td>
         </tr>
     </table>
 </div>
     <div class="col-md-4 lineContainer">
-
            <table class="productionLine" >
                <tr>
-                    <td class="orange" style="height:196px">
+                   {% if BC_CL_Label_Sticking.AutoStart %}
+                        <td class="green" style="height:196px">
+                            {% else %}
+                        <td class="red" style="height:196px">
+                   {% endif %}
                         <span class="machineName">LBL<small>Labels sticking</small></span>
                         <span class="machineParams">
-                            <span class="machineParamLeft">
-                                <img src="/gfx/icon_96_slow.png" alt="status" width="64" />
-                            </span>
                             <span class="machineParamRight">
-                                <strong>13,5</strong>Auto start
+                            <strong>{{ BC_CL_Label_Sticking.mct }}</strong>
+                            {% if BC_CL_Label_Sticking.AutoStart %}
+                                Auto start ON
+                                {% else %}
+                                Auto start OFF
+                            {% endif %}
                             </span>
                             <span class="spacer"></span>
                         </span>
-                    </td>
+                        </td>
                </tr>
                <tr>
-                   <td class="green" style="height:196px">
+                {% if Air_Leak.AutoStart %}
+                    <td class="green" style="height:196px">
+                {% else %}
+                    <td class="red" style="height:196px">
+                {% endif %}
                         <span class="machineName">AL<small>Air leak</small></span>
-                        <span class="machineParams">
-                            <span class="machineParamLeft">
-                                <img src="/gfx/icon_96_working.png" alt="status" width="64" />
-                            </span>
+                            <span class="machineParams">
                             <span class="machineParamRight">
-                                <strong>5,4</strong>Auto start
+                                <strong>{{ Air_Leak.mct }}</strong>
+                                {% if Air_Leak.AutoStart %}
+                                    Auto start ON
+                                {% else %}
+                                    Auto start OFF
+                                {% endif %}
                             </span>
                             <span class="spacer"></span>
                         </span>
                     </td>
                </tr>
                <tr>
-                   <td class="green" style="height:196px">
+                   {% if Electrical_Tester.AutoStart %}
+                        <td class="green" style="height:196px">
+                            {% else %}
+                        <td class="red" style="height:196px">
+                    {% endif %}
                         <span class="machineName">SC/ET<small>Shorting clip / E-test</small></span>
                         <span class="machineParams">
-                            <span class="machineParamLeft">
-                                <img src="/gfx/icon_96_working.png" alt="status" width="64" />
-                            </span>
                             <span class="machineParamRight">
-                                <strong>5,4</strong>Auto start
+                                <strong>{{ Electrical_Tester.mct }}</strong>
+                                    {% if Electrical_Tester.AutoStart %}
+                                        Auto start ON
+                                    {% else %}
+                                        Auto start OFF
+                                    {% endif %}
                             </span>
                             <span class="spacer"></span>
                         </span>
-                    </td>
+                        </td>
                </tr>
                <tr>
-                   <td style="height:197px">
+                   {% if Initiator_Crimping.AutoStart %}
+                        <td class="green" style="height:197px">
+                    {% else %}
+                        <td class="red" style="height:197px">
+                    {% endif %}
                         <span class="machineName">IC<small>Initiator crimping</small></span>
                         <span class="machineParams">
-                            <span class="machineParamLeft">
-                                <img src="/gfx/icon_96_poweroff.png" alt="status" width="64" />
-                            </span>
                             <span class="machineParamRight">
-                                <strong>5,4</strong>Auto start
+                                <strong>{{ Initiator_Crimping.mct }}</strong>
+                                {% if Initiator_Crimping.AutoStart %}
+                                    Auto start ON
+                                {% else %}
+                                    Auto start OFF
+                                {% endif %}
                             </span>
                             <span class="spacer"></span>
                         </span>
-                    </td>
+                        </td>
                </tr>
                <tr>
-                   <td class="green" style="height:197px">
+                   {% if Gas_Generant.AutoStart %}
+                        <td class="green" style="height:197px">
+                    {% else %}
+                        <td class="red" style="height:197px">
+                    {% endif %}
                         <span class="machineName">GG<small>Propellant filling</small></span>
                         <span class="machineParams">
-                            <span class="machineParamLeft">
-                                <img src="/gfx/icon_96_working.png" alt="status" width="64" />
-                            </span>
                             <span class="machineParamRight">
-                                <strong>5,4</strong>Auto start
+                                <strong>{{ Gas_Generant.mct }}</strong>
+                                    {% if Gas_Generant.AutoStart %}
+                                        Auto start ON
+                                    {% else %}
+                                        Auto start OFF
+                                    {% endif %}
                             </span>
                             <span class="spacer"></span>
                         </span>
-                    </td>
+                        </td>
                </tr>
-            </table>
+           </table>
     </div>
 </body>
 </html>

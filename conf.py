@@ -31,7 +31,7 @@ machines_names = {
             'target_network': None,
             'plc_id_in_target_network': None
          },
-    'Housing Bottle_Welding':
+    'Housing_Bottle_Welding':
         {
             'id_line': 32,
             'id_machine': 265,
@@ -47,7 +47,7 @@ machines_names = {
             'target_network': None,
             'plc_id_in_target_network': None
         },
-    'Diffuser Bottle_Welding':
+    'Diffuser_Bottle_Welding':
         {
             'id_line': 32,
             'id_machine': 266,
