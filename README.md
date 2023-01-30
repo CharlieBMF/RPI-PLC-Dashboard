@@ -10,6 +10,7 @@ Acquiring data from PLC in factory, store it in server SQL and visualise as dash
 </ul>
 <h2> Operation diagram </h2>
 <h3> Configuring PLC </h3>
+<img src="https://user-images.githubusercontent.com/109242797/215440818-33fecd3f-2b17-442e-898d-029866487106.png" alt='not found' title='PLC Config'>
 First of all it is necessary to open ports in PLC CPU for connection. In this example port 40020 is used.
 <img src="https://user-images.githubusercontent.com/109242797/215436365-18a7d392-62d1-42b1-a8b7-d52269cf5d4a.png" alt='not found' title='PLC Config'>
 <br>
@@ -42,4 +43,5 @@ Operation diagram looks like:
 Second step is creating a dashboard visualization for TV/PC etc.
 Dashboard shows each machine and actual status. This facilitates line operation, control of process parameters and line management. Django is used for this.
 <img src="https://user-images.githubusercontent.com/109242797/215440336-05ffdddf-73c8-4da2-b1e4-e456a45f824a.png" alt='not found' title='dashboard_on_monitor'>
+<img src="https://user-images.githubusercontent.com/109242797/215441090-39967583-6579-433f-befd-c3c3bfad786c.png" alt='not found' title='dashboard_on_tv'>
 
